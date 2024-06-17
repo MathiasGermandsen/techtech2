@@ -1,5 +1,7 @@
 ﻿@page "/counter"
 @using Npgsql
+@using Newtonsoft.Json
+@using System.Text.Json
 
 <PageTitle>Counter</PageTitle>
 
@@ -18,17 +20,53 @@
 @code {
     private List<string> roles = new List<string>();
 
+    private NpgsqlConnection connection;
+
     protected override async Task OnInitializedAsync()
     {
-        using (var conn = new
-        NpgsqlConnection(""))
+
+        string inputSQL = "SELECT role FROM Employees";
+
+        string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "conString.json");
+        string jsonString;
+
+        jsonString = await File.ReadAllTextAsync(filePath);
+
+        var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+        var jsonDoc = JsonDocument.Parse(jsonString);
+        var root = jsonDoc.RootElement;
+
+        string connectionString = root.GetProperty("ConnectionString").GetString();
+
+        connection = new NpgsqlConnection(connectionString);
+        connection.Open();
+        try
         {
-            conn.Open();
-            using (var cmd = new NpgsqlCommand("SELECT role FROM Employees", conn))
-            using (var reader = await cmd.ExecuteReaderAsync())
-                while (reader.Read())
-                    roles.Add(reader.GetString(0));
+            using (NpgsqlCommand command = new NpgsqlCommand(inputSQL, connection))
+            {
+                using (NpgsqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                      roles.Add(reader.GetString(0));
+                    }
+                }
+            }
         }
+
+
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+        finally
+        {
+            if (connection.State == System.Data.ConnectionState.Open)
+            {
+                connection.Close();
+            }
+        }
+
     }
 
 }

@@ -28,3 +28,6 @@
 /Users/mathias.germandsen/Desktop/techtech2/techtech2/obj/Debug/net8.0/techtech2.pdb
 /Users/mathias.germandsen/Desktop/techtech2/techtech2/obj/Debug/net8.0/techtech2.genruntimeconfig.cache
 /Users/mathias.germandsen/Desktop/techtech2/techtech2/obj/Debug/net8.0/ref/techtech2.dll
+/Users/mathias.germandsen/Desktop/techtech2/techtech2/bin/Debug/net8.0/Npgsql.dll
+/Users/mathias.germandsen/Desktop/techtech2/techtech2/obj/Debug/net8.0/techtech2.csproj.AssemblyReference.cache
+/Users/mathias.germandsen/Desktop/techtech2/techtech2/obj/Debug/net8.0/techtech2.csproj.Up2Date

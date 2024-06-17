@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "l4psDLlv3yk=",
+  "dgSpecHash": "DxwAUU+iw4M=",
   "success": true,
   "projectFilePath": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/techtech2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/mathias.germandsen/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/mathias.germandsen/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/Users/mathias.germandsen/.nuget/packages/npgsql/8.0.3/npgsql.8.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,14 +1,56 @@
-﻿@page "/"
-@using Npgsql
-@inject NavigationManager NavigationManager
-
-<PageTitle>Home</PageTitle>
+﻿@inject NavigationManager NavigationManager
+@page "/"
+@rendermode InteractiveServer
 
 
+<PageTitle>Email-Service</PageTitle>
 
+<body>
+<h1 class=" title">Email Service</h1>
 
+    <div class="btn-1">
+        <NavLink class="btn" href="@("/Counter")">
+            Send Email
+        </NavLink>
+    </div>
+</body>
 
+<style>
+    body{
+        background: rgb(216,234,233);
+        background: radial-gradient(circle, rgba(216,234,233,1) 0%, rgba(152,224,240,1) 100%);
+    }
 
-@code {
+    .title{
+        text-align:center;
+        color: white;
+    }
 
-}
+    .btn-1{
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Optional */
+    }
+
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #94c0ca; /* Green */
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 150px;
+    }
+
+    .btn:hover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #81aab3;
+        width: 150px;
+    }
+</style>
+

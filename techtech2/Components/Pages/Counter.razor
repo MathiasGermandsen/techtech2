@@ -29,19 +29,32 @@
             </div>
 
             <div class="form-group">
-    <label for="body">Body</label>
-    <textarea class="form-control" id="body" @bind="body"></textarea>
-</div>
+                <label for="body">Body</label>
+                <textarea class="form-control" id="body" @bind="body"></textarea>
+            </div>
 
             <div class="text-center mt-3">
                 <button class="btn btn-primary" @onclick="SendEmail">Send Mail</button>
             </div>
+
+            @if (Emails.Count <= 5)
+            {
+                foreach (string email in Emails)
+                {
+                    <p class="p-title">Sent to @email</p>
+                }
+            }
+            else
+            {
+                <p class="p-title">Sent to @Emails.Count emails</p>
+            }
+
         </div>
     </div>
 </div>
 
 @code {
-    private List<string> roles = new List<string>(); 
+    private List<string> roles = new List<string>();
     private List<string> SelectedRoles { get; set; } = new List<string>();
     private List<string> Emails = new List<string>();
 
@@ -105,9 +118,11 @@
         {
             SelectedRoles.Remove(role);
         }
+        Emails.Clear();
     }
     private void SendEmail()
     {
+
         GetEmails();
 
         foreach (var recipientMail in Emails)
@@ -147,7 +162,6 @@
         }
     }
 }
-
 
 <style>
     .Label-tag {

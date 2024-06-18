@@ -1,47 +1,47 @@
 {
   "Files": [
     {
-      "Id": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/obj/Debug/net8.0/scopedcss/projectbundle/techtech2.bundle.scp.css",
-      "PackagePath": "staticwebassets/techtech2.bundle.scp.css"
+      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\techtech2.bundle.scp.css",
+      "PackagePath": "staticwebassets\\techtech2.bundle.scp.css"
     },
     {
-      "Id": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/app.css",
-      "PackagePath": "staticwebassets/app.css"
+      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/bootstrap/bootstrap.min.css",
-      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/bootstrap/bootstrap.min.css.map",
-      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/conString.json",
-      "PackagePath": "staticwebassets/conString.json"
+      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\conString.json",
+      "PackagePath": "staticwebassets\\conString.json"
     },
     {
-      "Id": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/favicon.png",
-      "PackagePath": "staticwebassets/favicon.png"
+      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/mailCred.json",
-      "PackagePath": "staticwebassets/mailCred.json"
+      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\mailCred.json",
+      "PackagePath": "staticwebassets\\mailCred.json"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.techtech2.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.techtech2.props",
       "PackagePath": "build\\techtech2.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.techtech2.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.techtech2.props",
       "PackagePath": "buildMultiTargeting\\techtech2.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.techtech2.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.techtech2.props",
       "PackagePath": "buildTransitive\\techtech2.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.techtech2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.techtech2.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     }
   ],

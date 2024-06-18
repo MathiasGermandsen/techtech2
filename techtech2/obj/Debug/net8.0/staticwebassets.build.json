@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oqdFFVM64Q49NICkq0ZsDSDIHn2p82jWOxIWHAU1fiE=",
+  "Hash": "0s6c5L+MWHd0IMgIuSIU4A8Xer0XdNrPhlXW1J2E3Yc=",
   "Source": "techtech2",
   "BasePath": "_content/techtech2",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "techtech2\\wwwroot",
+      "Name": "techtech2/wwwroot",
       "Source": "techtech2",
-      "ContentRoot": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\",
+      "ContentRoot": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/",
       "BasePath": "_content/techtech2",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\techtech2.styles.css",
+      "Identity": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/obj/Debug/net8.0/scopedcss/bundle/techtech2.styles.css",
       "SourceId": "techtech2",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/techtech2",
       "RelativePath": "techtech2.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\techtech2.styles.css"
+      "OriginalItemSpec": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/obj/Debug/net8.0/scopedcss/bundle/techtech2.styles.css"
     },
     {
-      "Identity": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\techtech2.bundle.scp.css",
+      "Identity": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/obj/Debug/net8.0/scopedcss/projectbundle/techtech2.bundle.scp.css",
       "SourceId": "techtech2",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/techtech2",
       "RelativePath": "techtech2.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\techtech2.bundle.scp.css"
+      "OriginalItemSpec": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/obj/Debug/net8.0/scopedcss/projectbundle/techtech2.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\app.css",
+      "Identity": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/app.css",
       "SourceId": "techtech2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\",
+      "ContentRoot": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/",
       "BasePath": "_content/techtech2",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -71,13 +71,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\app.css"
+      "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/bootstrap/bootstrap.min.css",
       "SourceId": "techtech2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\",
+      "ContentRoot": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/",
       "BasePath": "_content/techtech2",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -90,13 +90,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/bootstrap/bootstrap.min.css.map",
       "SourceId": "techtech2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\",
+      "ContentRoot": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/",
       "BasePath": "_content/techtech2",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -109,13 +109,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\conString.json",
+      "Identity": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/conString.json",
       "SourceId": "techtech2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\",
+      "ContentRoot": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/",
       "BasePath": "_content/techtech2",
       "RelativePath": "conString.json",
       "AssetKind": "All",
@@ -128,13 +128,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\conString.json"
+      "OriginalItemSpec": "wwwroot/conString.json"
     },
     {
-      "Identity": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\favicon.png",
+      "Identity": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/favicon.png",
       "SourceId": "techtech2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\",
+      "ContentRoot": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/",
       "BasePath": "_content/techtech2",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -147,13 +147,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.png"
+      "OriginalItemSpec": "wwwroot/favicon.png"
     },
     {
-      "Identity": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\mailCred.json",
+      "Identity": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/mailCred.json",
       "SourceId": "techtech2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\",
+      "ContentRoot": "/Users/mathias.germandsen/Desktop/techtech2/techtech2/wwwroot/",
       "BasePath": "_content/techtech2",
       "RelativePath": "mailCred.json",
       "AssetKind": "All",
@@ -166,7 +166,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\mailCred.json"
+      "OriginalItemSpec": "wwwroot/mailCred.json"
     }
   ]
 }

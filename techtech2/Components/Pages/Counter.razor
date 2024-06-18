@@ -7,37 +7,41 @@
 
 <PageTitle>Counter</PageTitle>
 
-<h1>Counter</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+            <h1 class="my-4 text-center">Email-Services</h1>
 
-<select multiple @onchange="OnSelectedRolesChanged">
-    @foreach (var role in roles)
-    {
-        <option value="@role" selected="@SelectedRoles.Contains(role)">@role</option>
-    }
-</select>
+            <div class="form-group">
+                <label>Select Roles to Email:</label>
+                @foreach (var role in roles)
+                {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="@role" id="@role" @onchange="((ChangeEventArgs __e) => OnRoleCheckedChanged(role, __e))" />
+                        <label class="form-check-label" for="@role">@role</label>
+                    </div>
+                }
+            </div>
 
-<p>Subject</p>
-<input class="subject" @bind="subject">
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input class="form-control" id="subject" @bind="subject">
+            </div>
 
-<p>Body</p>
-<input class="body" @bind="body">
+            <div class="form-group">
+    <label for="body">Body</label>
+    <textarea class="form-control" id="body" @bind="body"></textarea>
+</div>
 
-
-<button class="btn btn-primary" @onclick="SendEmail">Send Mail</button>
-
-@if (Emails.Count <= 5)
-{
-    foreach (string email in Emails)
-    {
-        <p>Sent to @email</p>
-    }
-} else
-{
-    <p>Sent to @Emails.Count emails</p>
-}
+            <div class="text-center mt-3">
+                <button class="btn btn-primary" @onclick="SendEmail">Send Mail</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 @code {
-    private List<string> roles = new List<string>();
+    private List<string> roles = new List<string>(); 
     private List<string> SelectedRoles { get; set; } = new List<string>();
     private List<string> Emails = new List<string>();
 
@@ -45,6 +49,7 @@
     private string body;
 
     private NpgsqlConnection connection;
+
 
     protected override async Task OnInitializedAsync()
     {
@@ -90,16 +95,17 @@
         return connectionString;
     }
 
-    private void OnSelectedRolesChanged(ChangeEventArgs e)
+    private void OnRoleCheckedChanged(string role, ChangeEventArgs e)
     {
-        var selectedOptions = e.Value as IEnumerable<string>;
-        if (selectedOptions != null)
+        if ((bool)e.Value && !SelectedRoles.Contains(role))
         {
-            SelectedRoles = selectedOptions.ToList();
+            SelectedRoles.Add(role);
         }
-        Emails.Clear();
+        else if (!(bool)e.Value && SelectedRoles.Contains(role))
+        {
+            SelectedRoles.Remove(role);
+        }
     }
-
     private void SendEmail()
     {
         GetEmails();
@@ -141,3 +147,16 @@
         }
     }
 }
+
+
+<style>
+    .Label-tag {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .p-title {
+        margin-top: 20px;
+    }
+</style>
+

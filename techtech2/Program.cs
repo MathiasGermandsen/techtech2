@@ -1,10 +1,29 @@
 using techtech2.Components;
+using techtech2.MailService;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+var config = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("wwwroot/mailCred.json", optional: true, reloadOnChange: true)
+    .Build();
+
+var smtpSettingsSection = config.GetSection("SmtpSettings");
+
+var smtpSettings = smtpSettingsSection.Get<SmtpSettings>();
+
+
+builder.Services.AddSingleton(sp => new MailService(
+    smtpHost: smtpSettings.Host,
+    smtpPort: smtpSettings.Port,
+    fromAddressParameter: smtpSettings.FromAddress,
+    smtpUsername: smtpSettings.Username,
+    smtpPassword: smtpSettings.Password
+));
 
 var app = builder.Build();
 

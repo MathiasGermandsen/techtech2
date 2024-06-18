@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\mailCred.json",
+      "PackagePath": "staticwebassets\\mailCred.json"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.techtech2.props",
       "PackagePath": "build\\techtech2.props"
     },

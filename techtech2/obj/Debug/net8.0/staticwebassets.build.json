@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KY6f4BDVyvypEm6+H8LIVRtEsg/ChlzNr2uu5eGBO24=",
+  "Hash": "oqdFFVM64Q49NICkq0ZsDSDIHn2p82jWOxIWHAU1fiE=",
   "Source": "techtech2",
   "BasePath": "_content/techtech2",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\mailCred.json",
+      "SourceId": "techtech2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\",
+      "BasePath": "_content/techtech2",
+      "RelativePath": "mailCred.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\mailCred.json"
     }
   ]
 }

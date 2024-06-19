@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pm27Uw1mHa0DSHOjl8pUds4FUr0VV61MKUKkgEAyGZo=",
+  "Hash": "RinJGB/GRARbCAijj3cIat1EjmkaW2DVAFWcCbhDIFM=",
   "Source": "techtech2",
   "BasePath": "_content/techtech2",
   "Mode": "Default",
@@ -186,6 +186,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\logo2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Alexander\\source\\repos\\techtech2\\techtech2\\wwwroot\\images\\logo3.jpg",
+      "SourceId": "techtech2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Alexander\\source\\repos\\techtech2\\techtech2\\wwwroot\\",
+      "BasePath": "_content/techtech2",
+      "RelativePath": "images/logo3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo3.jpg"
     },
     {
       "Identity": "C:\\Users\\Alexander\\source\\repos\\techtech2\\techtech2\\wwwroot\\mailCred.json",

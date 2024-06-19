@@ -20,17 +20,6 @@
                         <p class="text-danger">Please fill in all fields</p>
                     }
 
-                    @if (Emails.Count <= 5)
-                    {
-                        foreach (string email in Emails)
-                        {
-                            <p class="p-title">Sent to @email</p>
-                        }
-                    }
-                    else
-                    {
-                        <p class="p-title">Sent to @Emails.Count emails</p>
-                    }
                         <div class="form-group">
                             <label class="font-weight-bold" style="font-weight: bold; text-decoration: underline;">Select Roles to Email:</label>
                             <div class="row">
@@ -65,11 +54,64 @@
     </div>
 </div>
 
+@if (showSendingModal)
+{
+    <div class="modal fade show d-block" tabindex="-1" role="dialog" style="background-color: rgba(0,0,0,.5);">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <p>Sending mails...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@if (showSuccessModal)
+{
+    <div class="modal fade show d-block" tabindex="-1" role="dialog" style="background-color: rgba(0,0,0,.5);">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Success</h5>
+                    <button type="button" class="close" @onclick="CloseSuccessModal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Email sent successfully!</p>
+                </div>
+
+                @if (Emails.Count <= 5)
+                {
+                    foreach (string email in Emails)
+                    {
+                        <div>
+                            <p style="margin-left: 15px;">Sent to @email</p>
+                        </div>
+                    }
+                } else
+                {
+                    <div>
+                        <p style="margin-left: 15px;">Sent to @Emails.Count emails</p>
+                    </div>
+                }
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="CloseSuccessModal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
 @code {
     private List<string> roles = new List<string>();
     private List<string> SelectedRoles { get; set; } = new List<string>();
     private List<string> Emails = new List<string>();
     private bool emptyField = false;
+    private bool showSendingModal= false;
+    private bool showSuccessModal = false;
 
     private string subject;
     private string body;
@@ -143,13 +185,39 @@
             return;
         }
 
-        foreach (var recipientMail in Emails)
-        {
-            emptyField = false;
-            MailService.SendEmail(recipientMail, subject, body);
-        }
+        showSendingModal = true;
+        StateHasChanged();
+
+
+        var timer = new Timer(state =>
+         {
+            foreach (var recipientMail in Emails)
+            {
+                emptyField = false;
+                MailService.SendEmail(recipientMail, subject, body);
+            }
+        
+            showSendingModal = false;
+            showSuccessModal = true;
+
+             InvokeAsync(() => StateHasChanged());
+
+            ClearPage();
+        }, null, 1000, Timeout.Infinite);
     }
 
+    private void CloseSuccessModal()
+    {
+        showSuccessModal = false;
+    }
+
+
+    private void ClearPage(){
+        subject = string.Empty;
+        body = string.Empty;
+    }
+
+    
     private void GetEmails()
     {
         Emails.Clear();

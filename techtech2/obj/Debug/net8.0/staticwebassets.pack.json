@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\images\\logo2.jpg"
     },
     {
+      "Id": "C:\\Users\\Alexander\\source\\repos\\techtech2\\techtech2\\wwwroot\\images\\logo3.jpg",
+      "PackagePath": "staticwebassets\\images\\logo3.jpg"
+    },
+    {
       "Id": "C:\\Users\\Alexander\\source\\repos\\techtech2\\techtech2\\wwwroot\\mailCred.json",
       "PackagePath": "staticwebassets\\mailCred.json"
     },

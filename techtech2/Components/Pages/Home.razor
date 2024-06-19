@@ -6,29 +6,33 @@
 <PageTitle>Email-Service</PageTitle>
 
 <body>
-<h1 class=" title">Email Service</h1>
 
     <div class="btn-1">
-        <NavLink class="btn" href="@("/mailservice")">
-            Send Email
-        </NavLink>
+        <img class="logo" src="/images/logo3.jpg">
+            <NavLink class="btn" href="@("/mailservice")">
+                Send Email
+            </NavLink>
     </div>
 </body>
 
 <style>
     body{
-        background: rgb(216,234,233);
-        background: radial-gradient(circle, rgba(216,234,233,1) 0%, rgba(152,224,240,1) 100%);
+        
     }
 
-    .title{
-        text-align:center;
-        color: white;
+
+    .logo{
+        background-size: cover;
+        width: 700px;
+        height: 120px;
+        line-height: 200px;
+        margin-top: 100px;
     }
 
     .btn-1{
         display: flex;
         justify-content: center;
+        flex-direction: column;
         align-items: center; /* Optional */
     }
 
@@ -36,21 +40,23 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #94c0ca; /* Green */
+        background-color: #2D2D2D;
         color: #ffffff;
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         width: 150px;
+        margin-top: 45px;
     }
 
     .btn:hover {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #81aab3;
+        background-color: black;
         width: 150px;
+        color: white;
     }
 </style>
 

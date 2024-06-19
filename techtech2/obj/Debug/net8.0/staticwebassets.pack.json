@@ -1,31 +1,39 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\techtech2.bundle.scp.css",
+      "Id": "C:\\Users\\Alexander\\source\\repos\\techtech2\\techtech2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\techtech2.bundle.scp.css",
       "PackagePath": "staticwebassets\\techtech2.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\app.css",
+      "Id": "C:\\Users\\Alexander\\source\\repos\\techtech2\\techtech2\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\Alexander\\source\\repos\\techtech2\\techtech2\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Alexander\\source\\repos\\techtech2\\techtech2\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\conString.json",
+      "Id": "C:\\Users\\Alexander\\source\\repos\\techtech2\\techtech2\\wwwroot\\conString.json",
       "PackagePath": "staticwebassets\\conString.json"
     },
     {
-      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\Alexander\\source\\repos\\techtech2\\techtech2\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\arian\\source\\repos\\TechTech\\techtech2\\techtech2\\wwwroot\\mailCred.json",
+      "Id": "C:\\Users\\Alexander\\source\\repos\\techtech2\\techtech2\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Alexander\\source\\repos\\techtech2\\techtech2\\wwwroot\\images\\logo2.jpg",
+      "PackagePath": "staticwebassets\\images\\logo2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Alexander\\source\\repos\\techtech2\\techtech2\\wwwroot\\mailCred.json",
       "PackagePath": "staticwebassets\\mailCred.json"
     },
     {

@@ -1,0 +1,190 @@
+﻿@page "/mailservice"
+@using Npgsql
+@using Newtonsoft.Json
+@using System.Text.Json
+@inject techtech2.MailService.MailService MailService
+@rendermode InteractiveServer
+
+<PageTitle>Email Services</PageTitle>
+
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+            <div class="card shadow-lg">
+                <div class="card-header text-white text-center py-4" style="background-color: #2D2D2D;">
+                    <h1 class="display-4">Email Services</h1>
+                </div>
+                <div class="card-body p-5">
+                    @if (emptyField)
+                    {
+                        <p class="text-danger">Please fill in all fields</p>
+                    }
+
+                    @if (Emails.Count <= 5)
+                    {
+                        foreach (string email in Emails)
+                        {
+                            <p class="p-title">Sent to @email</p>
+                        }
+                    }
+                    else
+                    {
+                        <p class="p-title">Sent to @Emails.Count emails</p>
+                    }
+                        <div class="form-group">
+                            <label class="font-weight-bold" style="font-weight: bold; text-decoration: underline;">Select Roles to Email:</label>
+                            <div class="row">
+                                @foreach (var role in roles)
+                                {
+                                    <div class="col-6 col-md-4 col-lg-3 form-check">
+                                        <input class="form-check-input" type="checkbox" value="@role" id="@role" @onchange="((ChangeEventArgs __e) => OnRoleCheckedChanged(role, __e))" />
+                                        <label class="form-check-label" for="@role" style="font-weight: bold;">@role</label>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="subject" class="font-weight-bold" style="font-weight: bold; text-decoration: underline;">Subject</label>
+                            <input class="form-control form-control-lg" id="subject" @bind="subject" style="width: 100%; max-width: 800px;">
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="body" class="font-weight-bold" style="font-weight: bold; text-decoration: underline;">Body</label>
+                            <textarea class="form-control form-control-lg" id="body" @bind="body" rows="10" style="height: 300px;"></textarea>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <button class="btn btn-primary btn-lg px-5" @onclick="SendEmail" style="background-color: #2D2D2D;">Send Mail</button>
+                        </div>
+                </div>
+                <div class="card-footer text-center py-4">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<string> roles = new List<string>();
+    private List<string> SelectedRoles { get; set; } = new List<string>();
+    private List<string> Emails = new List<string>();
+    private bool emptyField = false;
+
+    private string subject;
+    private string body;
+
+    private NpgsqlConnection connection;
+
+    protected override async Task OnInitializedAsync()
+    {
+        string inputSQL = "SELECT role FROM Employees";
+
+        connection = new NpgsqlConnection(GetConnectionString());
+        connection.Open();
+
+        try
+        {
+            using (NpgsqlCommand command = new NpgsqlCommand(inputSQL, connection))
+            {
+                using (NpgsqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (!roles.Contains(reader.GetString(0)))
+                            roles.Add(reader.GetString(0));
+                    }
+                }
+            }
+        }
+        finally
+        {
+            if (connection.State == System.Data.ConnectionState.Open)
+            {
+                connection.Close();
+            }
+        }
+    }
+
+    private string GetConnectionString()
+    {
+        string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "conString.json");
+        string jsonString = File.ReadAllText(filePath);
+
+        var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+        var jsonDoc = JsonDocument.Parse(jsonString);
+        var root = jsonDoc.RootElement;
+
+        string connectionString = root.GetProperty("ConnectionString").GetString();
+
+        return connectionString;
+    }
+
+    private void OnRoleCheckedChanged(string role, ChangeEventArgs e)
+    {
+        if ((bool)e.Value && !SelectedRoles.Contains(role))
+        {
+            SelectedRoles.Add(role);
+        }
+        else if (!(bool)e.Value && SelectedRoles.Contains(role))
+        {
+            SelectedRoles.Remove(role);
+        }
+        Emails.Clear();
+    }
+
+    private void SendEmail()
+    {
+        GetEmails();
+
+        if (Emails.Count == 0 || subject == string.Empty || body == string.Empty)
+        {
+            emptyField = true;
+            return;
+        }
+
+        foreach (var recipientMail in Emails)
+        {
+            emptyField = false;
+            MailService.SendEmail(recipientMail, subject, body);
+        }
+    }
+
+    private void GetEmails()
+    {
+        Emails.Clear();
+        connection.Open();
+        try
+        {
+            foreach (var role in SelectedRoles)
+            {
+                string inputSQL = $"SELECT email FROM Employees WHERE role = '{role}'";
+
+                using (NpgsqlCommand command = new NpgsqlCommand(inputSQL, connection))
+                {
+                    using (NpgsqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Emails.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+        }
+        finally
+        {
+            if (connection.State == System.Data.ConnectionState.Open)
+            {
+                connection.Close();
+            }
+        }
+    }
+}
+
+<style>
+    .p-title {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
